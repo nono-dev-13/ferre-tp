@@ -1,6 +1,8 @@
 import type { Metadata } from "next";
 import "./globals.css";
 import { ReactNode } from "react";
+import { Header } from "@/components/Header";
+import { Footer } from "@/components/Footer";
 
 export const metadata: Metadata = {
   title: "FERRE TP Entreprise de travaux publics",
@@ -15,9 +17,13 @@ export default function RootLayout({
   return (
     <html lang="en">
       <body
-        className="antialiased"
+        className="antialiased min-h-screen flex flex-col"
       >
-        {children}
+        <Header />
+        <main className="pt-15 flex-1">
+          {children}
+        </main>
+        <Footer />
       </body>
     </html>
   );
