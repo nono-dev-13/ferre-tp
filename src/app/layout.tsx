@@ -1,12 +1,13 @@
-import type { Metadata } from "next";
-import "./globals.css";
-import { ReactNode } from "react";
-import { Header } from "@/components/Header";
-import { Footer } from "@/components/Footer";
+import type { Metadata } from 'next';
+import './globals.css';
+import { ReactNode } from 'react';
+import { Header } from '@/components/Header';
+import { Footer } from '@/components/Footer';
 
 export const metadata: Metadata = {
-  title: "FERRE TP Entreprise de travaux publics",
-  description: "FERRE TP, entreprise de travaux publics, Services et environnement, location TP, terrassement, transport gravats matériaux boues, drainage dans la région de Chartres",
+  title: 'FERRE TP Entreprise de travaux publics',
+  description:
+    'FERRE TP, entreprise de travaux publics, Services et environnement, location TP, terrassement, transport gravats matériaux boues, drainage dans la région de Chartres',
 };
 
 export default function RootLayout({
@@ -16,13 +17,9 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="en">
-      <body
-        className="antialiased min-h-screen flex flex-col"
-      >
+      <body className="antialiased min-h-screen flex flex-col">
         <Header />
-        <main className="pt-15 flex-1">
-          {children}
-        </main>
+        <main className="pt-15 flex-1">{children}</main>
         <Footer />
       </body>
     </html>
