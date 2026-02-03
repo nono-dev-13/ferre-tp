@@ -1,9 +1,9 @@
-import { JSX } from 'react';
 import { ThemeToggle } from '@/components/ThemeToggle';
 import Link from 'next/link';
-import { MainNav } from '@/components/MainNav';
+import { Nav } from '@/components/header/nav';
+import { MobileMenu } from '@/components/header/mobileMenu';
 
-function Header(): JSX.Element {
+function Header() {
   return (
     <header className="fixed top-0 left-0 w-full bg-primary text-primary-foreground p-4">
       <div className="container mx-auto flex justify-between items-center">
@@ -11,8 +11,11 @@ function Header(): JSX.Element {
           <h1 className="text-xl font-bold">FERRE TP</h1>
         </Link>
         <div className="flex items-center gap-4">
-          <MainNav />
+          <div className="hidden md:flex">
+            <Nav />
+          </div>
           <ThemeToggle />
+          <MobileMenu />
         </div>
       </div>
     </header>

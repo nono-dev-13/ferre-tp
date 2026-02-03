@@ -2,9 +2,8 @@
 
 import Link from 'next/link';
 import { usePathname } from 'next/navigation';
-import { JSX } from 'react';
 
-function Footer(): JSX.Element {
+function Footer() {
   const pathname = usePathname();
   const showLegalLink = pathname !== '/legal-mentions';
   return (
