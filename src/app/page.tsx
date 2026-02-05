@@ -1,10 +1,12 @@
 import Link from 'next/link';
+import { Button } from '@/components/ui/button';
+import { routes } from '@/config/routes';
 import './home.scss';
 
 export default function Home() {
   return (
     <div className="home">
-      <main className="container mx-auto p-4 md:px-0 pt-40">
+      <main className="container mx-auto p-4 md:px-0 pt-30">
         <h1 className="text-primary-foreground text-5xl text-center">
           Votre <strong>entreprise de travaux publics</strong>
           <br />à <strong>Chartres et ses environs</strong>
@@ -14,13 +16,13 @@ export default function Home() {
           <strong>travaux de terrassement, assainissement et aménagements extérieurs</strong>
           en <strong>Eure-et-Loir</strong>, <strong>Yvelines</strong> et <strong>Essonne</strong>.
         </p>
-        <div className="mt-8 flex justify-center gap-4">
-          <Link href="/contact" className="bg-primary">
-            Demander un devis
-          </Link>
-          <Link href="/expertise" className="bg-secondary">
-            Voir nos réalisations
-          </Link>
+        <div className="mt-8 flex flex-col md:flex-row justify-center gap-4">
+          <Button asChild variant="default" size="lg">
+            <Link href={routes.contact}>Demander un devis</Link>
+          </Button>
+          <Button asChild variant="secondary" size="lg">
+            <Link href={routes.expertise}>Voir nos réalisations</Link>
+          </Button>
         </div>
       </main>
     </div>

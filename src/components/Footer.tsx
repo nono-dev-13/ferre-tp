@@ -3,6 +3,7 @@
 import { Weather } from '@/components/Weather';
 import Link from 'next/link';
 import { usePathname } from 'next/navigation';
+import { routes } from '@/config/routes';
 
 function Footer() {
   const pathname = usePathname();
@@ -16,7 +17,7 @@ function Footer() {
           <p>FERRE TP entreprise de travaux public au capital de 44 000 €.</p>
           <p>N° TVA : FR 53 453 388 134. Siret : 453 388 134</p>
           {showLegalLink && (
-            <Link href="/legal-mentions" className="underline">
+            <Link href={routes.legalMentions} className="underline">
               Mentions Légales
             </Link>
           )}

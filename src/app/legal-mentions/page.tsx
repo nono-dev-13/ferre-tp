@@ -1,6 +1,6 @@
 function LegalMentions() {
   return (
-    <div className="container mx-auto px-4 py-8 max-w-6xl">
+    <div className="container mx-auto p-4 pt-30">
       <header className="mb-8 text-center">
         <h1 className="text-3xl font-bold mb-4">Mentions légales de www.ferre-tp.com</h1>
         <h2 className="text-3xl font-bold mb-4">au 28 novembre 2020</h2>
