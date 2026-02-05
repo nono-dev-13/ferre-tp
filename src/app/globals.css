@@ -124,4 +124,12 @@
     @apply bg-background text-foreground;
     font-family: var(--font-sans);
   }
+
+  .heading {
+    font-family: var(--font-heading);
+  }
+
+  .text {
+    color: var(--font-sans);
+  }
 }

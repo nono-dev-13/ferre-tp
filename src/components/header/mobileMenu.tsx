@@ -28,7 +28,7 @@ function MobileMenu() {
           >
             <X />
           </Button>
-          <Nav />
+          <Nav onLinkClick={() => setOpen(false)} />
         </div>
       )}
     </div>
