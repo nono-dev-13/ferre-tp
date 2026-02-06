@@ -1,6 +1,7 @@
 import Link from 'next/link';
 import { metiers } from '@/data/metiers';
 import { Text } from '@/components/Text';
+import { ArrowRight } from 'lucide-react';
 
 function Expertise() {
   return (
@@ -19,7 +20,7 @@ function Expertise() {
               {metier.content}
             </Text>
             <Link href={`/expertise/${metier.id}`} className="text-primary font-medium">
-              Découvrir →
+              Découvrir <ArrowRight />
             </Link>
           </li>
         ))}
