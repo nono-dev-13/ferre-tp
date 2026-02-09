@@ -59,8 +59,8 @@ function ContactPage() {
             </Text>
           </div>
         </div>
-        <div className="md:max-w-lg bg-secondary p-6 md:ml-auto md:mr-0">
-          <ContactForm loading={loading} onSubmit={handleSubmit} />
+        <div className="w-full md:max-w-2xl p-6 md:ml-auto md:mr-0">
+          <ContactForm loading={loading} success={success} onSubmit={handleSubmit} />
           {success && (
             <Alert className="mt-4">
               <CheckCircle2Icon className="h-4 w-4" />

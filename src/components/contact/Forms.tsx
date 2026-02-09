@@ -3,6 +3,7 @@ import { Input } from '@/components/ui/input';
 import { Textarea } from '@/components/ui/textarea';
 import { Text } from '@/components/Text';
 import { useForm, SubmitHandler } from 'react-hook-form';
+import { useEffect } from 'react';
 
 interface IFormInput {
   firstname: string;
@@ -14,17 +15,25 @@ interface IFormInput {
 
 interface Props {
   loading: boolean;
+  success: boolean;
   onSubmit: SubmitHandler<IFormInput>;
 }
 
-function ContactForm({ loading, onSubmit }: Props) {
+function ContactForm({ loading, success, onSubmit }: Props) {
   const {
     register,
     handleSubmit,
-    formState: { errors },
+    reset,
+    formState: { errors, isValid },
   } = useForm<IFormInput>({
     mode: 'onChange',
   });
+
+  useEffect(() => {
+    if (success) {
+      reset();
+    }
+  }, [success, reset]);
 
   return (
     <form onSubmit={handleSubmit(onSubmit)} className="space-y-4">
@@ -103,7 +112,7 @@ function ContactForm({ loading, onSubmit }: Props) {
         )}
       </div>
 
-      <Button type="submit" variant="default" disabled={loading}>
+      <Button type="submit" variant="default" disabled={!isValid || loading}>
         {loading ? 'Envoi...' : 'Envoyer'}
       </Button>
     </form>
