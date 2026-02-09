@@ -9,7 +9,7 @@ export async function POST(req: Request) {
   try {
     await resend.emails.send({
       from: 'Ferre TP <onboarding@resend.dev>',
-      to: 'ferretp28@gmail.com',
+      to: 'arnaud.boubli19@gmail.com',
       subject: 'Nouveau message du site ferre-tp.com',
       html: `
         <table role="presentation" width="100%" cellpadding="0" cellspacing="0" style="margin:0;padding:0;background:#f5f5f5;">
@@ -22,9 +22,6 @@ export async function POST(req: Request) {
         <tr>
           <td style="background:#1f2937;color:#ffffff;padding:24px;text-align:center;">
             <h2 style="margin:0;font-size:22px;">FERRE TP</h2>
-            <p style="margin:6px 0 0;font-size:14px;">
-              Nouveau message du site ferre-tp.com
-            </p>
           </td>
         </tr>
 
@@ -33,7 +30,17 @@ export async function POST(req: Request) {
 
             <p style="margin:0 0 12px;">
               <strong>Nom :</strong><br>
-              ${data.name}
+              ${data.firstname}
+            </p>
+
+            <p style="margin:0 0 12px;">
+              <strong>Nom :</strong><br>
+              ${data.lastname}
+            </p>
+
+            <p style="margin:0 0 12px;">
+              <strong>Nom :</strong><br>
+              ${data.phone}
             </p>
 
             <p style="margin:0 0 12px;">
@@ -58,7 +65,7 @@ export async function POST(req: Request) {
 
         <tr>
           <td style="background:#f9fafb;padding:16px;text-align:center;font-size:12px;color:#666;">
-            Message envoyé depuis ferre-tp.com
+            Message envoyé depuis le site internet
           </td>
         </tr>
 

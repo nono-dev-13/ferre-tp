@@ -6,7 +6,7 @@ import Image from 'next/image';
 
 function Header() {
   return (
-    <header className="fixed top-0 left-0 w-full bg-background text-foreground p-4 shadow-[0_4px_30px_rgba(0,237,100,0.6)]">
+    <header className="fixed top-0 left-0 z-50 w-full bg-background text-foreground p-4 shadow-[0_4px_30px_rgba(0,237,100,0.6)]">
       <div className="container mx-auto flex justify-between items-center">
         <h1>
           <Link href="/" aria-label="Accueil">

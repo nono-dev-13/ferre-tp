@@ -10,7 +10,7 @@ function Footer() {
   const pathname = usePathname();
   const showLegalLink = pathname !== '/legal-mentions';
   return (
-    <footer className="fixed-bottom left-0 w-full bg-primary text-background p-4">
+    <footer className="fixed-bottom left-0 w-full bg-secondary text-foreground p-4">
       <div className="container mx-auto flex flex-col md:flex-row justify-between items-end gap-4">
         <Weather />
         <div className="flex flex-col items-end text-sm space-y-1">

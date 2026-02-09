@@ -7,6 +7,17 @@ export interface Metier {
 
 export const metiers: Metier[] = [
   {
+    id: 'terrassement',
+    title: 'Terrassement',
+    content:
+      'Nivelage de terrain, fouilles archéologiques, terrassement pleine masse, évacuation des terres.',
+    images: [
+      '/images/terrassement-1.jpg',
+      '/images/terrassement-2.jpg',
+      '/images/terrassement-4.jpg',
+    ],
+  },
+  {
     id: 'assainissement',
     title: 'Assainissement',
     content:
@@ -14,7 +25,7 @@ export const metiers: Metier[] = [
     images: [
       '/images/assainissement-1.jpg',
       '/images/assainissement-2.jpg',
-      '/images/assainissement-3.jpg',
+      '/images/assainissement-4.jpg',
     ],
   },
   {
@@ -28,7 +39,7 @@ export const metiers: Metier[] = [
     id: 'voirie',
     title: 'Voirie',
     content: 'Création de chemins et routes, gravillonnage, enrobés, pavés, calcaire.',
-    images: ['/images/voirie-1.jpg', '/images/voirie-2.jpg', '/images/voirie-3.jpg'],
+    images: ['/images/enrobee-1.jpg', '/images/enrobee-3.jpg', '/images/pave.jpg'],
   },
   {
     id: 'reseaux-divers',
