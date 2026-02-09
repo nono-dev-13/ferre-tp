@@ -5,7 +5,7 @@ import { ArrowRight } from 'lucide-react';
 
 function Expertise() {
   return (
-    <section className="container mx-auto p-4 pt-30">
+    <section className="container mx-auto p-4 pt-35">
       <Text variant="h1" className=" mb-12">
         Les métiers de Ferre TP
       </Text>
@@ -19,9 +19,12 @@ function Expertise() {
             <Text variant="p" className="text-muted-foreground mb-4">
               {metier.content}
             </Text>
-            <Link href={`/expertise/${metier.id}`} className="text-primary font-medium">
-              Découvrir <ArrowRight />
-            </Link>
+            <div className="flex items-center group">
+              <Link href={`/expertise/${metier.id}`} className="text-primary font-medium">
+                Découvrir
+              </Link>
+              <ArrowRight className="ml-1 text-primary size-4 transition-transform group-hover:translate-x-1" />
+            </div>
           </li>
         ))}
       </ul>

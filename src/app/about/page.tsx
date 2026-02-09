@@ -1,7 +1,7 @@
 import { Text } from '@/components/Text';
 function About() {
   return (
-    <div className="container mx-auto p-4 pt-30">
+    <div className="container mx-auto p-4 pt-35">
       <Text variant="p" className="mb-4">
         FERRÉ TP est une entreprise familiale spécialisée dans les travaux publics et le
         terrassement, implantée à Houville-la-Branche, entre Chartres et Rambouillet, à proximité

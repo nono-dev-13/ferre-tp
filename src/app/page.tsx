@@ -8,7 +8,7 @@ export default function Home() {
   return (
     <div className="home">
       <main className="container mx-auto p-4 md:px-0 pt-30 md:pt-50">
-        <Text variant="h1" className="text-primary-foreground text-center mb-6">
+        <Text variant="h1" className="text-center mb-6">
           Votre <strong>entreprise de travaux publics</strong>
           <br />à <strong>Chartres et ses environs</strong>
         </Text>
@@ -21,7 +21,7 @@ export default function Home() {
           <Button asChild variant="default" size="lg">
             <Link href={routes.contact}>Demander un devis</Link>
           </Button>
-          <Button asChild variant="secondary" size="lg">
+          <Button asChild variant="outline" size="lg">
             <Link href={routes.expertise}>Voir nos réalisations</Link>
           </Button>
         </div>

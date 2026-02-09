@@ -25,7 +25,7 @@ function ContactPage() {
   }
 
   return (
-    <div className="container mx-auto p-4 pt-30">
+    <div className="container mx-auto p-4 pt-35">
       <Text variant="h1" className="mb-6">
         Vous avez des questions, <br />
         nous avons les réponses
@@ -59,7 +59,7 @@ function ContactPage() {
             </Text>
           </div>
         </div>
-        <div className="w-full md:max-w-2xl p-6 md:ml-auto md:mr-0">
+        <div className="w-full md:max-w-2xl md:ml-auto md:mr-0">
           <ContactForm loading={loading} success={success} onSubmit={handleSubmit} />
           {success && (
             <Alert className="mt-4">

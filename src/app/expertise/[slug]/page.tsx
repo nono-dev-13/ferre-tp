@@ -30,11 +30,11 @@ async function ExpertisePage({ params }: { params: Promise<{ slug: string }> }) 
   const metier = metiers.find((m) => m.id === slug);
 
   if (!metier) {
-    return <div className="container mx-auto p-4 pt-30">Expertise non trouvée</div>;
+    return <div className="container mx-auto p-4 pt-40">Expertise non trouvée</div>;
   }
 
   return (
-    <div className="container mx-auto p-4 pt-30">
+    <div className="container mx-auto p-4 pt-40">
       <Button asChild variant="outline" size="sm" className="mb-4">
         <Link href={routes.expertise}>Retour aux expertises</Link>
       </Button>
