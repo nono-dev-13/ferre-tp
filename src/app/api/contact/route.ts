@@ -9,7 +9,7 @@ export async function POST(req: Request) {
   try {
     await resend.emails.send({
       from: 'Ferre TP <onboarding@resend.dev>',
-      to: 'arnaud.boubli19@gmail.com',
+      to: 'ferretp28@gmail.com',
       subject: 'Nouveau message du site ferre-tp.com',
       html: `
         <table role="presentation" width="100%" cellpadding="0" cellspacing="0" style="margin:0;padding:0;background:#f5f5f5;">
