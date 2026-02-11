@@ -6,16 +6,16 @@ import './home.scss';
 
 export default function Home() {
   return (
-    <div className="home">
-      <main className="container mx-auto p-4 md:px-0 pt-30 md:pt-50">
+    <div className="home with-background">
+      <main className="container mx-auto p-4 md:px-0 pt-50">
         <Text variant="h1" className="text-center mb-6">
           Votre <strong>entreprise de travaux publics</strong>
           <br />à <strong>Chartres et ses environs</strong>
         </Text>
         <Text variant="p" className="text-center max-w-3xl mx-auto">
           FERRÉ TP accompagne les particuliers, professionnels et collectivités pour leurs
-          <strong>travaux de terrassement, assainissement et aménagements extérieurs</strong>
-          en <strong>Eure-et-Loir</strong>, <strong>Yvelines</strong> et <strong>Essonne</strong>.
+          <strong> travaux de terrassement, assainissement et aménagements extérieurs</strong>
+          en <strong> Eure-et-Loir</strong>, <strong>Yvelines</strong> et <strong>Essonne</strong>.
         </Text>
         <div className="mt-8 flex flex-col md:flex-row justify-center gap-4">
           <Button asChild variant="default" size="lg">

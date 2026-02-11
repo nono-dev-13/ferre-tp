@@ -132,4 +132,30 @@
   .text {
     color: var(--font-sans);
   }
+
+  .with-background {
+    position: relative;
+    min-height: 90vh;
+    background-image: var(--page-bg-image);
+    background-size: cover;
+    background-position: center;
+    background-attachment: fixed;
+
+    &::before {
+      content: '';
+      position: absolute;
+      top: 0;
+      left: 0;
+      right: 0;
+      bottom: 0;
+      background-color: var(--background);
+      opacity: 0.85;
+      z-index: 0;
+    }
+
+    > * {
+      position: relative;
+      z-index: 2;
+    }
+  }
 }

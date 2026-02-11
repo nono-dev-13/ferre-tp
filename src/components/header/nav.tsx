@@ -7,10 +7,14 @@ export interface Props {
 
 function Nav({ onLinkClick }: Props) {
   return (
-    <ul className="flex flex-col md:flex-row gap-6">
+    <ul className="flex flex-col md:flex-row gap-8 md:gap-6">
       {navigation.map((item: INavigation) => (
         <li key={item.href}>
-          <Link onClick={onLinkClick} href={item.href} className="font-medium hover:opacity-70">
+          <Link
+            onClick={onLinkClick}
+            href={item.href}
+            className="font-medium text-2xl md:text-base hover:opacity-70"
+          >
             {item.label}
           </Link>
         </li>

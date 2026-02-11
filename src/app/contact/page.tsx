@@ -6,6 +6,7 @@ import { Alert, AlertDescription, AlertTitle } from '@/components/ui/alert';
 import { CheckCircle2Icon } from 'lucide-react';
 import ContactMap from '@/components/contact/Maps';
 import ContactForm from '@/components/contact/Forms';
+import './contact.scss';
 
 function ContactPage() {
   const [loading, setLoading] = useState(false);
@@ -25,56 +26,57 @@ function ContactPage() {
   }
 
   return (
-    <div className="container mx-auto p-4 pt-35">
-      <Text variant="h1" className="mb-6">
-        Vous avez des questions, <br />
-        nous avons les réponses
-      </Text>
-      <div className="flex-col md:flex-row flex gap-12">
-        <div className="self-start md:self-end order-1 md:order-0">
-          <div>
-            <Text variant="h3" className="mb-2">
-              Localisation
-            </Text>
-            <Text variant="p" className="mb-2">
-              FERRE TP <br />
-              Chemin de coltainville <br />
-              28700 Houville-la-Branche
-            </Text>
+    <div className="contact with-background">
+      <div className="container mx-auto p-4 pt-35">
+        <Text variant="h1" className="mb-6">
+          Vous avez des questions, <br />
+          nous avons les réponses
+        </Text>
+        <div className="flex-col md:flex-row flex gap-12 mb-8">
+          <div className="self-start md:self-end order-1 md:order-0">
+            <div>
+              <Text variant="h3" className="mb-2">
+                Localisation
+              </Text>
+              <Text variant="p" className="mb-2">
+                FERRE TP <br />
+                Chemin de coltainville <br />
+                28700 Houville-la-Branche
+              </Text>
+            </div>
+            <div>
+              <Text variant="h3" className="mb-2">
+                Email
+              </Text>
+              <Text variant="p" className="mb-2">
+                contact@ferre-tp.com
+              </Text>
+            </div>
+            <div>
+              <Text variant="h3" className="mb-2">
+                Contact
+              </Text>
+              <Text variant="p" className="mb-2">
+                02 37 24 09 82
+              </Text>
+            </div>
           </div>
-          <div>
-            <Text variant="h3" className="mb-2">
-              Email
-            </Text>
-            <Text variant="p" className="mb-2">
-              contact@ferre-tp.com
-            </Text>
-          </div>
-          <div>
-            <Text variant="h3" className="mb-2">
-              Contact
-            </Text>
-            <Text variant="p" className="mb-2">
-              02 37 24 09 82
-            </Text>
+          <div className="w-full md:max-w-2xl md:ml-auto md:mr-0">
+            <ContactForm loading={loading} success={success} onSubmit={handleSubmit} />
+            {success && (
+              <Alert className="mt-4">
+                <CheckCircle2Icon className="h-4 w-4" />
+                <AlertTitle>Message Envoyé</AlertTitle>
+                <AlertDescription>
+                  Nous avons bien reçu votre message et nous vous répondrons dans les plus brefs
+                  délais.
+                </AlertDescription>
+              </Alert>
+            )}
           </div>
         </div>
-        <div className="w-full md:max-w-2xl md:ml-auto md:mr-0">
-          <ContactForm loading={loading} success={success} onSubmit={handleSubmit} />
-          {success && (
-            <Alert className="mt-4">
-              <CheckCircle2Icon className="h-4 w-4" />
-              <AlertTitle>Message Envoyé</AlertTitle>
-              <AlertDescription>
-                Nous avons bien reçu votre message et nous vous répondrons dans les plus brefs
-                délais.
-              </AlertDescription>
-            </Alert>
-          )}
-        </div>
+        <ContactMap />
       </div>
-
-      <ContactMap />
     </div>
   );
 }
